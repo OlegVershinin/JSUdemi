@@ -1,11 +1,24 @@
-console.log(100);
 
-function ruMba() {
-    return 'Update Funktion ruMba';
-}
+const numberOfFilms = prompt('Сколько фильмов Вы уже посмотрели', '');
+console.log(numberOfFilms);
 
-let value = ruMba();
+const personalMovieDB = {
+    count: +numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false,
+};
 
-console.log( value);
+let lastWatchedMovie = prompt('Один из последних просмотренных Вами фильмов?', '');
+let grade = prompt('Как Вы оцените его?', '');
 
-console.log(345678);
+personalMovieDB.movies[lastWatchedMovie] = grade;
+
+console.log(personalMovieDB);
+
+lastWatchedMovie = prompt('Один из последних просмотренных Вами фильмов?', '');
+grade = prompt('Как Вы оцените его?', '');
+
+personalMovieDB.movies[lastWatchedMovie] = grade;
+console.log(personalMovieDB);
